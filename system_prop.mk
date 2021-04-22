@@ -7,3 +7,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # Display
 PRODUCT_PROPERTY_OVERRIDES += \
     debug.hwui.use_buffer_age=false
+
+# Dex
+PRODUCT_PROPERTY_OVERRIDES += \
+    dalvik.vm.dex2oat-flags=--no-watch-dog \
+    dalvik.vm.dex2oat-filter=interpret-only \
+    dalvik.vm.dex2oat-threads=4 \
+    dalvik.vm.image-dex2oat-filter=speed
